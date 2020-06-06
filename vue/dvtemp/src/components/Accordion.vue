@@ -25,12 +25,15 @@ export default {
   methods: {
     accorCheck: function(event) {
 			var accorList = document.querySelectorAll(".accorList > li > a");
-			//if(accoType != "all") {
-			for (var i = 0; i < accorList.length; i++) {
-				accorList[i].classList.remove("active");
+			if(this.accoType != "separate") {
+				for (var i = 0; i < accorList.length; i++) {
+					accorList[i].classList.remove("active");
+				}
+				event.target.classList.add("active");
+			} else {
+				event.target.classList.toggle("active");
 			}
-			//}
-      event.target.classList.add("active");
+      
     }
   }
 };

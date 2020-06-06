@@ -2,6 +2,7 @@
   <div class="home">
     <Accordion 
       v-bind:parentData="accorItem"
+      accoType="separate"
     >
     </Accordion>
   </div>
