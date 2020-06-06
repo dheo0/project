@@ -20,10 +20,16 @@ const routes = [
       import(/* webpackChunkName: "about" */ "../views/About.vue")
   },
   {
-    path: "/library",
-    name: "Library",
+    path: "/tabview",
+    name: "tabview",
     component: () =>
-      import(/* webpackChunkName: "library" */ "../views/Library.vue")
+      import(/* webpackChunkName: "tabview" */ "../views/Tabview.vue")
+  },
+  {
+    path: "/accor",
+    name: "accor",
+    component: () =>
+      import(/* webpackChunkName: "accor" */ "../views/Accor.vue")
   }
 ];
 

@@ -1,5 +1,6 @@
 <template>
   <div class="home">
+    TAB Control
     <Tab></Tab>
   </div>
 </template>
@@ -9,7 +10,7 @@
 import Tab from "@/components/Tab.vue";
 
 export default {
-  name: "",
+  name: "tabview",
   components: {
     Tab
   }
