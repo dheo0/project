@@ -4,7 +4,8 @@
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link> |
       <router-link to="/tabview">TabMenu</router-link> |
-      <router-link to="/accor">Accordion</router-link>
+      <router-link to="/accor">Accordion</router-link> |
+      <router-link to="/shop">List</router-link>
     </div>
     <router-view />
   </div>

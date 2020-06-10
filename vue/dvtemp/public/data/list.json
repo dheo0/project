@@ -1,0 +1,20 @@
+{
+    "goods" : [
+        {
+            "id": "00001",
+            "src": "http://localhost:8080/img/temp/test.jpg",
+            "title": "국산 오이소박이 1kg",
+            "sold": 852,
+            "sprice": 9700,
+            "rprice": 15900
+        },
+        {
+            "id": "00002",
+            "src": "http://localhost:8080/img/temp/test.jpg",
+            "title": "국산 오이소박이 2kg",
+            "sold": 500,
+            "sprice": 12700,
+            "rprice": 22900
+        }
+    ]
+}

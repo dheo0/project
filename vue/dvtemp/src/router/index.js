@@ -1,7 +1,7 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
-
+import NotFound from "../views/NotFound.vue";
 Vue.use(VueRouter);
 
 const routes = [
@@ -9,6 +9,10 @@ const routes = [
     path: "/",
     name: "Home",
     component: Home
+  },
+  {
+    path: "*",
+    component: NotFound
   },
   {
     path: "/about",
@@ -30,6 +34,11 @@ const routes = [
     name: "accor",
     component: () =>
       import(/* webpackChunkName: "accor" */ "../views/Accor.vue")
+  },
+  {
+    path: "/shop",
+    name: "shop",
+    component: () => import(/* webpackChunkName: "shop" */ "../views/shop.vue")
   }
 ];
 

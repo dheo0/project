@@ -1,10 +1,6 @@
 <template>
   <div class="home">
-    <Accordion 
-      v-bind:parentData="accorItem"
-      accoType="separate"
-    >
-    </Accordion>
+    <Accordion v-bind:parentData="accorItem" accoType="all"> </Accordion>
   </div>
 </template>
 
