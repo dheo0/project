@@ -1,7 +1,6 @@
 <template>
-  <div class="list">
-    sdfsdf
-    <ShopList></ShopList>
+  <div class="list-wrap">
+    <ShopList :column="3"></ShopList>
   </div>
 </template>
 
@@ -11,12 +10,6 @@ export default {
   name: "shop",
   components: {
     ShopList
-  },
-  data() {
-    return {
-      currentTab: 0,
-      tabs: ["tab1", "tab2", "tab3"]
-    };
   }
 };
 </script>

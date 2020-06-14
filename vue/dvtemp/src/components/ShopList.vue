@@ -1,6 +1,6 @@
 <template>
   <div class="list">
-    <ul>
+    <ul :class="'col-'+ column">
       <li v-for="(item, index) in items" :key="index">
         <div class="thumbnail">
           <a href="#none" class="img">
@@ -35,6 +35,12 @@
 import axios from "axios";
 export default {
   name: "ShopList",
+  props: {
+    column: {
+      type: Number,
+      default: 4
+    }
+  },
   data() {
     return {
       items: [],
@@ -50,9 +56,7 @@ export default {
     };
   },
   mounted() {
-    axios
-    .get("http://localhost:8080/data/list.json")
-    .then(res => {
+    axios.get("http://localhost:8080/data/list.json").then(res => {
       this.items = res.data.goods;
     });
   },
@@ -65,7 +69,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-$bgColor : #e5e5e5;
+$bgColor: #e5e5e5;
 
 @mixin aspect-ratio($width, $height) {
   position: relative;
@@ -84,6 +88,12 @@ $bgColor : #e5e5e5;
 }
 
 .list {
+  & > ul {
+    display: table;
+    & > li {
+      display: table-cell;
+    }
+  }
   .thumbnail {
     position: relative;
     overflow: hidden;
